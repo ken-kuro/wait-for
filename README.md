@@ -20,7 +20,7 @@
   <img src="https://img.shields.io/github/license/Eficode/wait-for.svg?style=flat-square">
   </a> 
   <a href="https://github.com/Eficode/wait-for/actions">
-  <img src="https://img.shields.io/github/workflow/status/Eficode/wait-for/Test?style=flat-square&logo=github%20actions">
+  <img src="https://img.shields.io/github/actions/workflow/status/Eficode/wait-for/ci.yml?style=flat-square&logo=github%20actions">
   </a> 
   <a href="https://github.com/Eficode/wait-for/releases">
   <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/Eficode/wait-for?style=flat-square">
