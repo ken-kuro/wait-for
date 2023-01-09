@@ -11,12 +11,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-      
+
     - name: Build the test Docker image
-      run: docker build --tag wait-for .
-      
+      run: docker build --no-cache --target test-env --tag wait-for-test .
+
     - name: Run the tests
-      run: docker run --tty wait-for
+      run: docker run wait-for-test
 
   release:
     name: Release

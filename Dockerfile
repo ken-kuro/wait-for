@@ -1,20 +1,38 @@
-FROM node:16-alpine@sha256:a9b9cb880fa429b0bea899cd3b1bc081ab7277cc97e6d2dcd84bd9753b2027e1
+#################
+#  Base layer   #
+#################
+FROM alpine:edge as runtime-base
 
-# Install bash
-RUN apk add --no-cache bash
+# Install all dependencies
+RUN apk add --no-cache bash nmap-ncat wget
 
-# Create working directory
-RUN mkdir -p /app
 WORKDIR /app
+
+#################
+#  Test image   #
+#################
+FROM runtime-base as test-env
+
+# Install Node.js
+RUN apk add --no-cache nodejs npm
 
 # Install all Node dependencies
 COPY package.json /app/
 COPY package-lock.json /app/
-
 RUN npm ci
 
 # Copy source code
 COPY . /app/
 
-# Define default command
+# Perform tests when running this test-env container
 CMD npm test
+
+#################
+# Runtime image #
+#################
+FROM runtime-base as runtime
+
+COPY ./wait-for .
+
+ENTRYPOINT ["./wait-for"]
+CMD ["--help"]
