@@ -1,3 +1,10 @@
+## [2.2.4](https://github.com/eficode/wait-for/compare/v2.2.3...v2.2.4) (2023-01-09)
+
+
+### Bug Fixes
+
+* `wget` in alpine runs into an endless retry loop ([#100](https://github.com/eficode/wait-for/issues/100)) ([b15c461](https://github.com/eficode/wait-for/commit/b15c46119a7a2851c29a7e687d71eafb9fb8750a))
+
 ## [2.2.3](https://github.com/eficode/wait-for/compare/v2.2.2...v2.2.3) (2022-03-05)
 
 
