@@ -71,6 +71,15 @@ This can also be easily used in GitHub Actions, like so:
           WAIT_FOR_VERSION: 4df3f9262d84cab0039c07bf861045fbb3c20ab7 # v2.2.3
 ```
 
+We also publish a container to Docker Hub at [`eficode/wait-for`](https://hub.docker.com/r/eficode/wait-for), where we publish under the tag `latest` what's in `master` and tags for each release. (Only tags newer van v2.2.3 are available.) You can use the container like this:
+
+```bash
+$ docker run --rm eficode/wait-for google.com:80 -- echo success
+success
+```
+
+_Note: We will refrain from changes in the container we are publishing from triggering releases, as our primary distributable remains the script itself. One exception might be urgent security fixes._
+
 ## Examples
 
 To check if [www.eficode.com](https://www.eficode.com) is available:
