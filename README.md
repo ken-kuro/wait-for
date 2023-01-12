@@ -28,6 +28,18 @@
   <a href="https://github.com/Eficode/wait-for/releases">
   <img alt="Script file size" src="https://img.shields.io/github/size/eficode/wait-for/wait-for?style=flat-square&color=green">
   </a>
+    
+  <br/>
+  
+  <a href="https://hub.docker.com/r/eficode/wait-for/builds">
+  <img alt="Docker Cloud Build Status" src="https://img.shields.io/docker/cloud/build/eficode/wait-for?style=flat-square">
+  </a>
+  <a href="https://hub.docker.com/r/eficode/wait-for">
+  <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/eficode/wait-for?style=flat-square">
+  </a>
+  <a href="https://hub.docker.com/r/eficode/wait-for">
+  <img alt="Docker Image Size (latest semver)" src="https://img.shields.io/docker/image-size/eficode/wait-for?logo=docker&style=flat-square">
+  </a>
   <br/>
   <a href="https://github.com/eficode/wait-for#examples"><strong>Example usage</strong></a>
   ·
