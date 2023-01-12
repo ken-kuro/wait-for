@@ -53,6 +53,8 @@ When using this tool, you only need to pick the `wait-for` file as part of your 
 
 ## Usage
 
+### Locally
+
 Download the `wait-for` file, either the latest from [`master`](https://raw.githubusercontent.com/eficode/wait-for/master/wait-for) or for a specific version check out the [Releases](https://github.com/eficode/wait-for/releases)-page.
 
 With the file locally on your file system, you can directly invoke it.
@@ -74,7 +76,9 @@ $ wget -qO- https://raw.githubusercontent.com/eficode/wait-for/v2.2.3/wait-for |
 
 _Note: When using the latter option, make sure to pin the version by commit hash. Future releases could introduce non-backwards compatible changes and leaves you vulnerable to malicious users modifying this script in the future (as has e.g. [happened with Codecov](https://about.codecov.io/security-update/))._
 
-This can also be easily used in GitHub Actions, like so:
+### GitHub Actions
+
+Similarly to how we piped the script into our shell covered in local usage, we can also use this in GitHub Actions, like so:
 
 ```yaml
       - name: Wait for the database to start
@@ -82,6 +86,8 @@ This can also be easily used in GitHub Actions, like so:
         env:
           WAIT_FOR_VERSION: 4df3f9262d84cab0039c07bf861045fbb3c20ab7 # v2.2.3
 ```
+
+### Docker
 
 We also publish a container to Docker Hub at [`eficode/wait-for`](https://hub.docker.com/r/eficode/wait-for), where we publish under the tag `latest` what's in `master` and tags for each release. (Only tags newer van v2.2.3 are available.) You can use the container like this:
 
